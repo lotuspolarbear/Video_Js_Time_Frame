@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Clip</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet">		
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-offset-1 col-md-10">
+			<form class="form-horizontal" method="post" name="form">
+				<div class="row">
+					<div class="form-group col-sm-4">
+		                <label class="control-label col-sm-6">Start Time:</label>
+		                <div class="col-sm-6" >
+		                  	<input id="start_time" class="form-control" type="number" name="start_time" value="0" min="0" />
+		                </div>
+		            </div>
+		            <div class="form-group col-sm-4">
+		                <label class="control-label col-sm-6">End Time:</label>
+		                <div class="col-sm-6" >
+		                  	<input id="end_time" class="form-control" type="number" name="end_time" value="0" min="0" />
+		                </div>
+		            </div>
+		            <div class="form-group col-sm-4">
+		                <button class="btn btn-info clip-btn col-sm-offset-6 col-sm-6">Clip</button>
+		            </div>
+				</div>
+				<div class="row">
+					<video id="video" controls class="video-js vjs-default-skin">
+					  	<source src="videoplayback.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="row">
+					<div id="time_slider" class="noui-connect">
+					</div>
+				</div>
+            </form>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
+	<script type="text/javascript" src='assets/js/videojs-markers.min.js'></script>
+	<script type="text/javascript" src="assets/js/nouislider.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+</html>
